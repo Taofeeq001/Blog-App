@@ -10,6 +10,12 @@ const Login =()=>{
     const [error, setError] = useState(false);
     const [redirect, setRedirect] = useState(false)
 
+    const loginSubmit=(e)=>{
+        e.preventDefault();
+        if(!username || !password){
+            alert("Login and Password is required!")
+        }
+    }
     return(
         <div className="login">
             <div className="login-container">
@@ -17,7 +23,7 @@ const Login =()=>{
                     <h1>Sign In</h1>
                     <p>Login and See what we have for you</p>
                 </div>
-                <div className="login-form" action="">
+                <div onSubmit={loginSubmit} className="login-form" action="">
                     <div className="username">
                         <AiOutlineUser/>
                         <input type="text" 
@@ -34,7 +40,7 @@ const Login =()=>{
                     </div>
                     <a href="">Forgot Password?</a>
                     <div className="btn-container">
-                        <button className="btn1">Sign In</button>
+                        <button type="submit" className="btn1">Sign In</button>
                         <h4>OR</h4>
                         <a style={{width:'100%'}} href="/registerwithapple">
                             <button className="btn2">

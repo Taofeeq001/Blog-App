@@ -67,7 +67,7 @@ const SignUP=()=>{
                         <a href="./signin"><button>Have and Account</button></a>
                     </div>
                 </div>
-                <form onSubmit={handleSubmit} action="">
+                <form className="signup-form" onSubmit={handleSubmit} action="">
                     <div className="top-name">
                         <div className="column">
                             <label htmlFor="">First Name</label>

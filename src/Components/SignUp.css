@@ -9,7 +9,7 @@ main{
     display: flex;
     width: 60%;
 }
-form{
+.signup-form{
     width: 100%;
     background-color: white;
     box-shadow: 4px 0px 4px 4px rgb(0, 0, 0, 0.09);

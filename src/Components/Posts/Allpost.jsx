@@ -24,10 +24,11 @@ const Allpost=()=>{
             <div >
                 {
                     post.map((post, index)=>{
+                        console.log(post.cover_img);
                         return(
                             <div key={index} className="allpost">
-                                <h1><a href={`/posts/${post._id}`}>{post.title}</a></h1>
-                                <p><a href={`/posts/${post._id}`}>{post.summary}</a></p>
+                                <h1><a href={`/posts/${post.title}`}>{post.title}</a></h1>
+                                <p><a href={`/posts/${post.title}`}>{post.summary}</a></p>
                                 <img src={`https://blog-api-8337.onrender.com/${post.cover_img}`} alt="" />
                             </div>
                         )

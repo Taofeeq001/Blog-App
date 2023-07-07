@@ -4,9 +4,9 @@ import './Post.css'
 
 const Post= () => {
     const [post, setPost]= useState({});
-    const {id} = useParams();
+    const {title} = useParams();
     const fetchData = async()=>{
-        const base_url = `https://blog-api-8337.onrender.com/${id}`
+        const base_url = `https://blog-api-8337.onrender.com/${title}`
         try {
             await fetch(base_url)
             .then((res)=> res.json())
@@ -30,6 +30,7 @@ const Post= () => {
                     </div>
                     <em>Created at: {post.createdAt}</em>
                     <p>{post.title}</p>
+                    <img src={`https://blog-api-8337.onrender.com/${post.cover_img}`} alt="" />
                     <div dangerouslySetInnerHTML={{__html: post.content}}></div>
                     <b>Post Summary: {post.summary}</b>
                 </div>
