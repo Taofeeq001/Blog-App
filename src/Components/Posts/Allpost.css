@@ -1,0 +1,19 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.allpost{
+    border: 1px solid black;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.allpost img{
+    width: 80%;
+}
+.allpost a{
+    text-decoration: none;
+}

@@ -28,10 +28,10 @@ const Post= () => {
                         <h1>{post.title}</h1>
                         <em style={{border:'1px solid black', padding:'10px', backgroundColor:'green', borderRadius:'10px', color:'white', fontWeight:700}}>Views: {post.views}</em>
                     </div>
-                    
+                    <em>Created at: {post.createdAt}</em>
                     <p>{post.title}</p>
-                    <p>{post.summary}</p>
                     <div dangerouslySetInnerHTML={{__html: post.content}}></div>
+                    <b>Post Summary: {post.summary}</b>
                 </div>
             }
         </div>

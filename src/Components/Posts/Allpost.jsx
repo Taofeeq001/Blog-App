@@ -19,13 +19,13 @@ const Allpost=()=>{
         fetchData()
     }, [])
     return(
-        <div>
+        <div className="body">
             <h1>All posts</h1>
-            <div>
+            <div >
                 {
                     post.map((post, index)=>{
                         return(
-                            <div key={index}>
+                            <div key={index} className="allpost">
                                 <h1><a href={`/posts/${post._id}`}>{post.title}</a></h1>
                                 <p><a href={`/posts/${post._id}`}>{post.summary}</a></p>
                                 <img src={`https://blog-api-8337.onrender.com/${post.cover_img}`} alt="" />
