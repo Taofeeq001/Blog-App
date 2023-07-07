@@ -24,11 +24,13 @@ const Login =()=>{
                     <a href="">Forgot Password?</a>
                     <div className="btn-container">
                         <button className="btn1">Sign In</button>
-                        <p>OR</p>
-                        <button className="btn2">
-                            <BiLogoApple/>
-                            Sign in with Apple
-                        </button>
+                        <h4>OR</h4>
+                        <a style={{width:'100%'}} href="">
+                            <button className="btn2">
+                                <BiLogoApple/>
+                                Sign In with Apple
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
