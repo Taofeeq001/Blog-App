@@ -1,0 +1,19 @@
+.singlepost{
+    background: linear-gradient(270deg, brown, yellow,green, white);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.post-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    text-align: justify;
+    border: 2px solid black;
+    padding: 25px;
+    background-color: white;
+    
+}
