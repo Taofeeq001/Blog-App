@@ -26,7 +26,7 @@ const Post= () => {
                 <div className="post-content">
                     <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
                         <h1>{post.title}</h1>
-                        <em>Views: {post.views}</em>
+                        <em style={{border:'1px solid black', padding:'10px', backgroundColor:'green', borderRadius:'10px', color:'white', fontWeight:700}}>Views: {post.views}</em>
                     </div>
                     
                     <p>{post.title}</p>
