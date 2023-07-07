@@ -25,7 +25,7 @@ const Login =()=>{
                     <div className="btn-container">
                         <button className="btn1">Sign In</button>
                         <h4>OR</h4>
-                        <a style={{width:'100%'}} href="">
+                        <a style={{width:'100%'}} href="/registerwithapple">
                             <button className="btn2">
                                 <BiLogoApple/>
                                 Sign In with Apple

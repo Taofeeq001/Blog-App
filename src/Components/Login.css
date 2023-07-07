@@ -72,3 +72,13 @@ svg{
     justify-content: center;
     gap: 10px;
 }
+
+
+@media screen and (max-width:950px) {
+    .login{
+        width: 100%;
+    }
+    .login-container{
+        width: 90%;
+    }
+}
