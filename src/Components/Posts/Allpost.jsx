@@ -9,7 +9,7 @@ const Allpost=()=>{
         try {
             await fetch(base_url)
             .then((res)=>res.json())
-            .then(data=> setPost(data))
+            .then(data => setPost(data))
             
         } catch (error) {
             console.log(error)
@@ -24,7 +24,6 @@ const Allpost=()=>{
             <div >
                 {
                     post.map((post, index)=>{
-                        console.log(post.cover_img);
                         return(
                             <div key={index} className="allpost">
                                 <h1><a href={`/posts/${post.title}`}>{post.title}</a></h1>

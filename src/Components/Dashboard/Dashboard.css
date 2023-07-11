@@ -11,7 +11,7 @@
     height: 98%;
     display: grid;
     grid-template-columns: 13% auto 20%;
-    background-color: rgb(195, 195, 238);
+    background-color: white;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -26,4 +26,22 @@
     margin-left: 10rem;
     background-color: white;
     width: 100%;
+}
+.update{
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+
+}
+.update h1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.update::-webkit-scrollbar{
+    scroll-behavior: smooth;
+    /* scroll-snap-type: none; */
 }

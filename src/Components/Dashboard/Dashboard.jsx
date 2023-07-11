@@ -1,6 +1,7 @@
 import React from "react";
 import './Dashboard.css'
 import Aside from "./DashboardItems/Aside";
+import SportUpdate from "./DashUpdate/SportUpdate";
 
 const Dashboard = ()=>{
     return(
@@ -10,7 +11,10 @@ const Dashboard = ()=>{
                 <div className="dashboardcenter">
                     <h1>Dashboard</h1>
                 </div>
-                <div style={{backgroundColor:'white'}}><h3>Comments and Highlight page</h3></div>
+                <div className="update" >
+                    <h1>Trending Sports</h1>
+                    <SportUpdate/>
+                </div>
             </div>
         </div>
     )

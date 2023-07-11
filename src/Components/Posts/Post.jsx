@@ -6,6 +6,7 @@ import {formatISO9075} from 'date-fns'
 const Post= () => {
     const [post, setPost]= useState({});
     const {title} = useParams();
+    
     const fetchData = async()=>{
         const base_url = `https://blog-api-8337.onrender.com/${title}`
         try {

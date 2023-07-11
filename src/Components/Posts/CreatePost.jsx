@@ -9,7 +9,10 @@ const CreatePost=()=>{
     const [summary, setSummary] = useState('');
     const [content, setContent] = useState('');
     const [cover_img, setCover_Img] = useState('');
-    const [redirect, setRedirect] = useState(false)
+    const [redirect, setRedirect] = useState(false);
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false)
+    const [errorMessage, setErrorMessage] = useState("")
     const quilChange=()=>{
         setContent(content)
     }
@@ -50,30 +53,48 @@ const CreatePost=()=>{
         if(!title && !summary && !content){
             alert('pls input the required fields')
         }
-        const base_url = `http://blog-api-8337.onrender.com/create-post/`
-        try {
-            const postData =async()=>{
-                const response = await fetch(base_url,{
-                    body: JSON.stringify({title, summary, content, cover_img}),
-                    headers:{'content-type': 'application/json'},
-                    method:'POST'
-                })
-                if(response.ok){
-                    alert('Post successfully')
-                    setRedirect(true)
+        else if(title && summary && content ){
+            const base_url = `http://blog-api-8337.onrender.com/create-post`
+            try {
+                setLoading(true)
+                const postData =async()=>{
+                    const response = await fetch(base_url,{
+                        method:'POST',
+                        headers:{'content-type': 'application/json'},
+                        body: JSON.stringify({title, summary, content, cover_img})
+                    })
+                    if(response.ok){
+                        alert('Post successfully')
+                        setRedirect(true)
+                        setLoading(false)
+                    }else{
+                        const {message} = response;
+                        setError(true)
+                        setErrorMessage("Error: " + message)
+                        setLoading(false)
+
+                    }
                 }
+                postData()
+                
+            } catch (error) {
+                setError(true)
+                // console.log(error)
+
             }
-            postData()
-            
-        } catch (error) {
-            
         }
+        
+      }
+
+      if(redirect){
+        return<Navigate to={'/dashboard'}/>
       }
 
     return(
         
         <form className="upload-post" onSubmit={uploadPost}>
             <h1>Create Your post Here</h1>
+            <p>{errorMessage}</p>
             <div className="det">
                 <h2>Heading</h2>
                 <input className="title" type="text" 
@@ -107,7 +128,7 @@ const CreatePost=()=>{
                 name='content'
             />
             <div className="btn">
-                <button type="submit">Create Post</button>
+                <button type="submit">{loading? "Creating Post......":"Create Post"}</button>
             </div>
 
         </form>

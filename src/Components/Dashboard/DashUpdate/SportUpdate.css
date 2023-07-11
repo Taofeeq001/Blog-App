@@ -1,0 +1,26 @@
+.sportupdate{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    align-items: center;
+    margin: 10px 0 0 12px;
+    padding: 15px;
+}
+.sportupdate:hover{
+    background-color: white;
+}
+.sportupdatesub{
+    display: flex;
+    gap: 20px;
+}
+.sportupdate img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.like{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

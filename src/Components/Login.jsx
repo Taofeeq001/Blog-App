@@ -30,7 +30,7 @@ const Login =()=>{
                         body: JSON.stringify({username, password})
                     }).then(res => res.json())
                     if (response.ok){
-                        setRedirect(true)
+                        setRedirect(true);
                         alert("Login Successfully. Redirecting to Dashboard...");
                         setIsClick(false);
                         setError(false)

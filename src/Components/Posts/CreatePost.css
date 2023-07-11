@@ -23,3 +23,28 @@
     border-radius: 20px;
     cursor: pointer;
 }
+@media screen and (max-width: 950px) {
+    .upload-post{
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .det{
+        margin-left: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .title, .summary{
+        width: 100%;
+        border-style: dotted;
+        border-radius: 20px;
+    }
+    .message{
+        width: 100%;
+    }
+    .btn button{
+        padding: 10px;
+        font-size: larger;
+    }
+}
