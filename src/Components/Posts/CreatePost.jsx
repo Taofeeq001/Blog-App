@@ -8,14 +8,12 @@ const CreatePost=()=>{
     const [title, setTitle] = useState('');
     const [summary, setSummary] = useState('');
     const [content, setContent] = useState('');
-    const [cover_img, setCover_Img] = useState('');
+    const [file, setFile] = useState('');
     const [redirect, setRedirect] = useState(false);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false)
     const [errorMessage, setErrorMessage] = useState("")
-    const quilChange=()=>{
-        setContent(content)
-    }
+    
     
     const modules = {
         toolbar: [
@@ -49,19 +47,26 @@ const CreatePost=()=>{
         "font"
       ];
       const uploadPost = (e)=>{
+        const data = new FormData();
+        data.set("title", title);
+        data.set("summary", summary);
+        data.set("content", content);
+        data.set('file', file[0]);
         e.preventDefault()
         if(!title && !summary && !content){
             alert('pls input the required fields')
         }
         else if(title && summary && content ){
-            const base_url = `http://blog-api-8337.onrender.com/create-post`
+            const base_url = `https://blog-api-8337.onrender.com/create-post`
             try {
                 setLoading(true)
                 const postData =async()=>{
                     const response = await fetch(base_url,{
                         method:'POST',
                         headers:{'content-type': 'application/json'},
-                        body: JSON.stringify({title, summary, content, cover_img})
+                        body: JSON.stringify(data),
+                        credentials: "include",
+                        mode:'cors'
                     })
                     if(response.ok){
                         alert('Post successfully')
@@ -87,7 +92,7 @@ const CreatePost=()=>{
       }
 
       if(redirect){
-        return<Navigate to={'/dashboard'}/>
+        return<Navigate to={'/allpost'}/>
       }
 
     return(
@@ -113,9 +118,9 @@ const CreatePost=()=>{
             </div>
             <input
                 type="file" 
-                name="cover_img"
-                value={cover_img}
-                onChange={(event) => setCover_Img(event.target.value)}
+                name="file"
+                value={file}
+                onChange={(event) => setFile(event.target.value)}
                 id="" 
             />
             <ReactQuill
@@ -123,7 +128,7 @@ const CreatePost=()=>{
                 formats={formats}
                 modules={modules}
                 value={content}
-                onChange={quilChange}
+                onChange={newContent => setContent(newContent)}
                 theme="snow"
                 name='content'
             />
