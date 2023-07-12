@@ -2,9 +2,9 @@
     overflow: scroll;
     display: flex;
     flex-direction: column;
-    background-color: green;
+    background-color:green;
     width: 25%;
-    height: 100vh;
+    height: 102%;
     padding: 20px 0;
 
 }
@@ -17,7 +17,7 @@
 }
 .update-container::-webkit-scrollbar{
     scroll-behavior: smooth;
-    /* scroll-snap-type: none; */
+    scroll-snap-type: none;
 }
 .sportupdate{
     display: flex;

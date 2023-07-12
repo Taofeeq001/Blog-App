@@ -1,0 +1,124 @@
+.forum-board{
+    display: flex;
+    width: 100%;
+    background: linear-gradient(106.37deg, #ffe1bc, #ffcfd1, #f3c6f1);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.forumboard-container{
+    width: 98%;
+    height: 98%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+}
+.forum-container{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width:100%;
+    padding: 20px 10px;
+    overflow: scroll;
+}
+.forum-container::-webkit-scrollbar{
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+}
+.forum-top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px dashed green;
+    padding: 10px;
+    align-items: center;
+}
+.btns{
+    width: 50%;
+    display: flex;
+    gap: 40px;
+}
+.forum-options{
+    display: flex;
+    align-items: center;
+}
+.forumdetails{
+    
+}
+.forumdetails tr{
+    text-align: left;
+}
+.subject-author{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.lastPost{
+    width: 5%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+.Read{
+    width: 4%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.newpost{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    padding: 10px 20px;
+    border: none; 
+    cursor: pointer; 
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.newpost:hover{
+    background-color: rgb(174, 231, 174);
+    color: green;
+}
+.toppost{
+    background-color: white;
+    color: green;
+    font-weight: bold;
+    font-size: larger;
+    padding: 10px 20px;
+    border: 1px solid green;
+    cursor:pointer;
+    border-radius: 20px;
+}
+.toppost a{
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}
+.toppost a:hover{
+    color: white;
+}
+.toppost:hover{
+    background-color: green;
+    color: white;
+}
+.forum-search{
+    background-color: green;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 20px;
+    width: 30%;
+}
+.forum-search input{
+    padding: 15px;
+    width: 100%;
+    border: none;
+    background-color: white;
+    outline: none;
+    border-radius: 20px;
+}

@@ -12,15 +12,40 @@ const Dashboard=()=>{
                 {/* Aside Section */}
                 <Aside/>
                 <div className="dashboard-center">
-                    <h1>Welcome user to Your dashboard</h1>
-                    <h1>Welcome user to Your dashboard</h1>
-                    <h1>Welcome user to Your dashboard</h1>
-                    <h1>Welcome user to Your dashboard</h1>
-                    <h1>Welcome user to Your dashboard</h1>
-                    <h1>Welcome user to Your dashboard</h1>
-                    <h1>Welcome user to Your dashboard</h1>
-                    <h1>Welcome user to Your dashboard</h1>
-                    <h1>Welcome user to Your dashboard</h1>
+                    <div className="view">
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                        <h1>Welcome user to Your dashboard</h1>
+                    </div>
                 </div>                  
                 
                 {/* import the sport update */}

@@ -8,6 +8,9 @@ import Login from './Components/Login';
 import CreatePost from './Components/Posts/CreatePost';
 import Dashboard from './Components/Dashboard/Dash/Dashboard';
 import NewsBoard from './Components/News/NewsBoard';
+import Sport from './Components/Sport/Sport';
+import Forum from './Components/Forum/Forum';
+import Settings from './Components/Settings/Settings';
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path='/createpost' element={<CreatePost/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/news' element={<NewsBoard/>}/>
+          <Route path='/sports' element={<Sport/>}/>
+          <Route path='/forum' element={<Forum/>}/>
+          <Route path='/settings' element={<Settings/>}/>
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,4 +1,4 @@
-.board{
+.sport-board{
     display: flex;
     width: 100%;
     background: linear-gradient(106.37deg, #ffe1bc, #ffcfd1, #f3c6f1);
@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 }
-.board-container{
+.sportboard-container{
     width: 98%;
     height: 98%;
     background-color: white;
@@ -14,7 +14,7 @@
     display: flex;
     overflow: hidden;
 }
-.dashboard-center{
+.sport-container{
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -22,12 +22,7 @@
     padding: 20px 10px;
     overflow: scroll;
 }
-.view{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.dashboard-center::-webkit-scrollbar{
+.sport-container::-webkit-scrollbar{
     scroll-behavior: smooth;
     scroll-snap-type: none;
 }
