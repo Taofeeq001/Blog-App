@@ -4,7 +4,10 @@ import susan from '../../../Images/susanpix.jpg'
 
 const SportUpdate=()=>{
     return(
-        <div >
+        <div className="update-container">
+            <div className="update-title">
+                <h1>Sports Updates</h1>
+            </div>
             <div className="sportupdate">
                 <div className="sportupdatesub">
                     <img src={susan} alt="" />

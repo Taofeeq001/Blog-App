@@ -1,0 +1,28 @@
+.news-board{
+    display: flex;
+    width: 100%;
+    background: linear-gradient(106.37deg, #ffe1bc, #ffcfd1, #f3c6f1);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.newsboard-container{
+    width: 98%;
+    height: 98%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+}
+.news-container{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width:100%;
+    padding: 20px 10px;
+    overflow: scroll;
+}
+.news-container::-webkit-scrollbar{
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+}

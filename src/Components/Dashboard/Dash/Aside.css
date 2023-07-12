@@ -1,0 +1,59 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+.aside{
+    width: 15%;
+    height: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+.asid-top a{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.aside-sub{
+    width: 5%;
+    background-color: green;
+    border-radius: 20px;
+}
+.aside-btn{
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 2px;
+}
+.toggle{
+    color: white;
+}
+.asid-top{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 20px;
+    height: 10vh;
+    margin-bottom: 20px;
+}
+.log{
+    display: none;
+}
+
+.list-sub{
+    display: none;
+}
+.menu-items{
+    display: flex;
+    flex-direction: column;
+    gap: 60px; 
+}
+.items{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px ;
+}
+.items.active{
+    background-color: rgb(156, 151, 151);
+}
