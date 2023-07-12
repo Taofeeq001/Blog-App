@@ -30,20 +30,7 @@ const Forum=()=>{
                             <option value="">EFG</option>
                         </select>
                     </div>
-                    {/* <div className="forumdetails">
-                        <div className="subject-author">
-                            <h2>Subject/Author</h2>
-                            <p>What do you understand by the word Sport Administration</p>
-                        </div>
-                        <div className="lastPost">
-                            <h4>Updated at</h4>
-                            32 Mins ago
-                        </div>
-                        <div className="Read">
-                            <h4>No. of read</h4>
-                            0
-                        </div>
-                    </div> */}
+                    
                     <table className="forumdetails">
                         <tr>
                             <th className="subject-author">Subject/Author</th>
