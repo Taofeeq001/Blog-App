@@ -46,3 +46,9 @@
     justify-content: space-around;
     width: 100%;
 }
+
+@media screen and (max-width: 950px) {
+    .update-container{
+        display: none;
+    }
+}

@@ -2,10 +2,18 @@ a{
     text-decoration: none;
     color: white;
 }
-.aside{
+nav{
     width: 15%;
+    height: 100vh;
+    background-color: green;
+}
+.aside{
+    width: 100%;
     height: 100%;
     background-color: green;
+    
+}
+.destop-nav{
     display: flex;
     flex-direction: column;
 }
@@ -13,7 +21,7 @@ a{
     font-size: xx-large;
     font-weight: bold;
 }
-.aside-sub{
+.nav-sub{
     width: 4%;
     background-color: green;
     border-radius: 20px;
@@ -52,8 +60,41 @@ a{
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 10px 20px ;
+    padding: 10px 20px;
 }
-.items.active{
+.active{
     background-color: rgb(156, 151, 151);
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    align-items: center;
+}
+.active::before{
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    padding: 0;
+}
+.mobile-aside{
+    display: none;
+}
+
+@media screen and (max-width:950px) {
+    .destop-nav{
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    .mobile{
+        width: 100%;
+    }   
+    .mobile-aside{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
 }

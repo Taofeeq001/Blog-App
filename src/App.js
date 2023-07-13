@@ -11,6 +11,7 @@ import NewsBoard from './Components/News/NewsBoard';
 import Sport from './Components/Sport/Sport';
 import Forum from './Components/Forum/Forum';
 import Settings from './Components/Settings/Settings';
+import ForumPost from './Components/Forum/ForumPost';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/sports' element={<Sport/>}/>
           <Route path='/forum' element={<Forum/>}/>
           <Route path='/settings' element={<Settings/>}/>
+          <Route path='/forumpost' element={<ForumPost/>}/>
         </Routes>
       </BrowserRouter>
     </div>
