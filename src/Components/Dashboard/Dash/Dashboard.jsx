@@ -21,7 +21,7 @@ const Dashboard=()=>{
                 {/* Aside Section */}
                 <Aside/>
                 <div className="dashboard-center">
-                    <div className={toggle? "mobileSub":"mobile-asid"}>
+                    <div className="mobile-asid">
                         <div className="asid-top">
                             <a href="" className="logo">Logo</a>
                         </div>
