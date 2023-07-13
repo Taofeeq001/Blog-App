@@ -76,7 +76,7 @@ nav{
     background-color: white;
     padding: 0;
 }
-.mobile-aside{
+.mobile-nav{
     display: none;
 }
 
@@ -85,16 +85,25 @@ nav{
         display: none;
     }
     nav{
-        display: none;
+        width: 50%;
+        position: absolute;
+        left: 5px;
+        height: 98%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        z-index: 100;
+    }
+    .mobile-nav{
+        display: block;
     }
     .mobile{
         width: 100%;
     }   
-    .mobile-aside{
+    /* .mobile-aside{
         display: block;
         display: flex;
         flex-direction: column;
         height: 100vh;
         width: 100%;
-    }
+    } */
 }

@@ -3,10 +3,10 @@ import './Dashboard.css';
 import Aside from "./Aside";
 import SportUpdate from "./SportUpdate";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { BiLogOutCircle, BiSolidDashboard } from "react-icons/bi";
-import { BsNewspaper } from "react-icons/bs";
-import { MdOutlineForum, MdSportsScore } from "react-icons/md";
-import { IoMdSettings } from "react-icons/io";
+// import { BiLogOutCircle, BiSolidDashboard } from "react-icons/bi";
+// import { BsNewspaper } from "react-icons/bs";
+// import { MdOutlineForum, MdSportsScore } from "react-icons/md";
+// import { IoMdSettings } from "react-icons/io";
 
 
 
@@ -21,38 +21,37 @@ const Dashboard=()=>{
                 {/* Aside Section */}
                 <Aside/>
                 <div className="dashboard-center">
-                    <div className="mobile-asid">
+                    {/* <div className={toggle? "mobileSub":"mobile-asid"}>
                         <div className="asid-top">
                             <a href="" className="logo">Logo</a>
                         </div>
                         <div className="menu-items2">
-                            <a className="items" href="/dashboard">
+                            <a className="items2" href="/dashboard">
                                 <BiSolidDashboard/>
                                 <h4 className="list">Dashboard</h4>
                             </a>
-                            <a  className="items" href="/news">
+                            <a  className="items2" href="/news">
                                 <BsNewspaper/>
                                 <h4 className="list">News</h4>
                             </a>
-                            <a className="items" href="/sports">
+                            <a className="items2" href="/sports">
                                 <MdSportsScore/>
                                 <h4 className="list">Sport</h4>
                             </a>
-                            <a className="items" href="/forum">
+                            <a className="items2" href="/forum">
                                 <MdOutlineForum/>
                                 <h4 className="list">Sport Forum</h4>
                             </a>
-                            <a className="items" href="/settings">
+                            <a className="items2" href="/settings">
                                 <IoMdSettings/>
                                 <h4 className="list">Settings</h4>
                             </a>
-                            <a className="items" href="/signin">
+                            <a className="items2" href="/signin">
                                 <BiLogOutCircle/>
                                 <h4 className="list">Log Out</h4>
                             </a>
                         </div>
-                    </div>
-                    
+                    </div> */}
                     <div className="dashboard-view">
                         <div className="dash-view">
                             <div className="dash-viewTop">
@@ -64,9 +63,7 @@ const Dashboard=()=>{
                 </div>                  
                 
                 {/* import the sport update */}
-                <SportUpdate/>
-                
-                
+                <SportUpdate/>               
             </div>
         </div>
     )

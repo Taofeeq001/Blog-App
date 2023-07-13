@@ -16,7 +16,6 @@
 }
 .dashboard-center{
     display: flex;
-    /* flex-direction: column; */
     gap: 20px;
     width:100%;
     padding: 20px 10px;
@@ -44,6 +43,12 @@
     flex-direction: column;
     gap: 50px;
 }
+.items2{
+    padding-left: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
 @media screen and (max-width: 950px) {
     .dashboard-center{
@@ -52,24 +57,25 @@
     .mobile{
         display: block;
     }
-    .mobile-asid{
-        display: block;
+    /* .mobile-asid{
+        display: flex;
         flex-direction: column;
-        width: 60%;
+        width: 48%;
         height: 98%;
         background-color: green;
         position: absolute;
         top: 8px;
         left: 5px;
-        overflow: hidden;
+        overflow: hidden !important;
         z-index: 100;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
+        transition: 3s ease;
     }
-    /* .mobileSub{
-        display: block;
-        width: 50%;
+    .mobileSub{
+        width: 48%;
         height: 98%;
+        transition: 3s ease;
     } */
     .dash-viewTop{
         width: 100%;

@@ -54,10 +54,41 @@ const Aside=()=>{
                     </a>
                 </div>
             </div>
-        </nav>
-        
-    
-        
+            <div className="mobile-nav">
+                <div className="asid-top">
+                    <a href="" className={click? "log":"logo"}>Logo</a>
+                    {/* <button onClick={buttonClick} className="aside-btn">
+                        {click? <FiX className="toggle"/>:<RxHamburgerMenu className="toggle"/>}
+                    </button> */}
+                </div>
+                <div className="menu-items">
+                    <a className="items" href="/dashboard">
+                        <BiSolidDashboard/>
+                        <h4 className={click? "list-sub":"list"}>Dashboard</h4>
+                    </a>
+                    <a  className="items" href="/news">
+                        <BsNewspaper/>
+                        <h4 className={click? "list-sub":"list"}>News</h4>
+                    </a>
+                    <a className="items" href="/sports">
+                        <MdSportsScore/>
+                        <h4 className={click? "list-sub":"list"}>Sport</h4>
+                    </a>
+                    <a className="items" href="/forum">
+                        <MdOutlineForum/>
+                        <h4 className={click? "list-sub":"list"}>Sport Forum</h4>
+                    </a>
+                    <a className="items" href="/settings">
+                        <IoMdSettings/>
+                        <h4 className={click? "list-sub":"list"}>Settings</h4>
+                    </a>
+                    <a className="items" href="/signin">
+                        <BiLogOutCircle/>
+                        <h4 className={click? "list-sub":"list"}>Log Out</h4>
+                    </a>
+                </div>
+            </div>
+        </nav>        
     )
 }
 export default Aside;
