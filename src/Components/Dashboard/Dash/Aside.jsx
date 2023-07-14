@@ -3,14 +3,15 @@ import './Aside.css'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {BiSolidDashboard} from 'react-icons/bi';
 import {BsNewspaper} from 'react-icons/bs';
-import {MdSportsScore, MdOutlineForum} from 'react-icons/md'
-import {BiLogOutCircle} from 'react-icons/bi'
-import {IoMdSettings} from 'react-icons/io'
-import {FiX} from 'react-icons/fi'
+import {MdSportsScore, MdOutlineForum} from 'react-icons/md';
+import {BiLogOutCircle} from 'react-icons/bi';
+import {IoMdSettings} from 'react-icons/io';
+import {FiX} from 'react-icons/fi';
+
 
 const Aside=()=>{
     const [click, setClick] = useState(false);
-    const [active, setActive] = useState(false)
+    const [tog, setTog] = useState(false)
     const buttonClick = ()=>{
         setClick(!click)
     }
@@ -19,6 +20,8 @@ const Aside=()=>{
     //     setActive(!active)
     // }
     return(
+        <>
+        <button><RxHamburgerMenu onClick={()=> setTog(!tog)} className="tog2"/></button>
         <nav className={click? "nav-sub":'nav'}>
             <div className="destop-nav">
                 <div className="asid-top">
@@ -53,15 +56,14 @@ const Aside=()=>{
                         <h4 className={click? "list-sub":"list"}>Log Out</h4>
                     </a>
                 </div>
-            </div>
+            </div> 
+        </nav>
+        <nav className={tog? "nav2-sub":"nav2"}>
             <div className="mobile-nav">
                 <div className="asid-top">
                     <a href="" className={click? "log":"logo"}>Logo</a>
-                    {/* <button onClick={buttonClick} className="aside-btn">
-                        {click? <FiX className="toggle"/>:<RxHamburgerMenu className="toggle"/>}
-                    </button> */}
                 </div>
-                <div className="menu-items">
+                <div className={"menu-items"}>
                     <a className="items" href="/dashboard">
                         <BiSolidDashboard/>
                         <h4 className={click? "list-sub":"list"}>Dashboard</h4>
@@ -88,7 +90,8 @@ const Aside=()=>{
                     </a>
                 </div>
             </div>
-        </nav>        
+        </nav>
+        </>        
     )
 }
 export default Aside;

@@ -24,16 +24,15 @@
 .dashboard-view{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    z-index: 10;
 }
 .dashboard-center::-webkit-scrollbar{
     scroll-behavior: smooth;
     scroll-snap-type: none;
 }
-.mobile{
+/* .mobile{
     display: none;
-}
+    width: 10% !important;
+} */
 
 .mobile-asid{
     display: none;
@@ -57,26 +56,6 @@
     .mobile{
         display: block;
     }
-    /* .mobile-asid{
-        display: flex;
-        flex-direction: column;
-        width: 48%;
-        height: 98%;
-        background-color: green;
-        position: absolute;
-        top: 8px;
-        left: 5px;
-        overflow: hidden !important;
-        z-index: 100;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        transition: 3s ease;
-    }
-    .mobileSub{
-        width: 48%;
-        height: 98%;
-        transition: 3s ease;
-    } */
     .dash-viewTop{
         width: 100%;
     }
