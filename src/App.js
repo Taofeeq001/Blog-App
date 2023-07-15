@@ -12,13 +12,15 @@ import Sport from './Components/Sport/Sport';
 import Forum from './Components/Forum/Forum';
 import Settings from './Components/Settings/Settings';
 import ForumPost from './Components/Forum/ForumPost';
+import Landingpage from './Components/Landingpage/Landingpage';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<SignUP/>}/>
+          <Route path='/' element={<Landingpage/>}/>
+          <Route path='/signup' element={<SignUP/>}/>
           <Route path='/signin' element={<Login/>}/>
           <Route path='/allposts' element={<Allpost/>}/>
           <Route path='/posts/:title' element={<Post/>}/>
