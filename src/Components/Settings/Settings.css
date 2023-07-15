@@ -22,7 +22,7 @@
     padding: 20px 10px;
     overflow: scroll;
 }
-.user-setting{
+.user-img{
     width: 200px;
     height: 200px;
     color: lightgreen;
@@ -35,7 +35,6 @@
     display: flex;
     width: 70%;
     justify-content: space-between;
-    font-size: x-large;
 }
 .account-reset{
     display: flex;
@@ -44,4 +43,25 @@
 .account-reset a{
     color: green;
     font-weight: bold;
+    font-size: large;
+}
+
+
+@media screen and (max-width: 950px) {
+    .settings-container h1{
+        font-size: x-large;
+    }
+    .settings-details{
+        flex-direction: column-reverse;
+        font-size: small;
+        gap: 20px;
+    }
+    .account-reset{
+        flex-direction: column;
+        gap: 0;
+    }
+    .user-img{
+        width: 80px;
+        height: 80px;
+    }
 }

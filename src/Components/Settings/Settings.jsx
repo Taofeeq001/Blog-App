@@ -13,7 +13,7 @@ const Settings=()=>{
                 <Aside/>
                 <div className='settings-container'>
                     <h1 style={{color:'green'}}>Hello, USER!</h1>
-                        <BiUserCircle className="user-setting"/>
+                        <BiUserCircle className="user-img"/>
                     <div className="settings-details">
                         <h2>Account Details</h2>
                         <div className="account-reset">
@@ -25,7 +25,7 @@ const Settings=()=>{
                         <p>Name: user's Name </p>
                         <p>Email:  user's Email</p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
