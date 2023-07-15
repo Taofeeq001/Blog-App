@@ -22,7 +22,26 @@
     padding: 20px 10px;
     overflow: scroll;
 }
+.user-setting{
+    width: 200px;
+    height: 200px;
+    color: lightgreen;
+}
 .settings-container::-webkit-scrollbar{
     scroll-behavior: smooth;
     scroll-snap-type: none;
+}
+.settings-details{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    font-size: x-large;
+}
+.account-reset{
+    display: flex;
+    gap: 5rem;
+}
+.account-reset a{
+    color: green;
+    font-weight: bold;
 }
