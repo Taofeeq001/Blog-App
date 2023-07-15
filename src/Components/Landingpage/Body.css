@@ -1,0 +1,38 @@
+.body{
+    width: 80%;
+    border: 1px solid black;
+    /* height: 100vh; */
+}
+.one{
+    display: flex;
+    flex-direction: column;
+}
+.trend{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.internation-news{
+    display: flex;
+    flex-direction: column;
+    /* width: 300px; */
+}
+.trend-top{
+    display: flex;
+    flex-direction: column;
+}
+.trend-list{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.internation-news a{
+    color: blue;
+}
+.trend-img{
+    width: 300px;
+    height: 200px;
+}
+/* .{
+
+} */

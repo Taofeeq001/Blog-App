@@ -7,8 +7,8 @@ const Nav = ()=>{
             <h3>SportEnTrust</h3>
             <div className="menu">
                 <a href="">Home</a>
-                <a href="">Sports</a>
                 <a href="">News</a>
+                <a href="">Sports</a>
                 <a href="">Weather News</a>
                 <a href="">Politics</a>
                 <a href="">Sport Forum</a>
