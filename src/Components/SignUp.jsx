@@ -64,7 +64,7 @@ const SignUP=()=>{
                     <p>Lorem ipsum, dolor sit amet consectetur  id, nostrum, temporibus nemo aut earum et aliquam quasi obcaecati assumenda ea consequatur rem culpa quibusdam eos eligendi. Esse doloribus quas, natus dolor laudantium cum quasi illum modi? Aliquid eveniet, obcaecati natus rem totam fugit iure culpa. Quisquam vel distinctio eum repellendus vero corrupti. Neque repellat dicta laboriosam iusto, laborum asperiores maxime accusantium quia fugiat. Culpa, voluptatibus saepe in nihil illo eveniet quos quae totam unde fugiat. Aut, quae. Quae nam doloremque, laborum id enim eos eum voluptatibus porro sunt quis voluptates dolores iste?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptas ab neque omnis quis blanditiis minus veniam atque, aut incidunt alias nam obcaecati sequi. Nisi atque ab deleniti dolore, libero reprehenderit beatae provident nam esse rem explicabo, iusto nihil dolor.</p>
                     <div>
-                        <a href="./signin"><button>Have and Account</button></a>
+                        <a href="./signin"><button className="button1">Have and Account</button></a>
                     </div>
                 </div>
                 <form className="signup-form" onSubmit={handleSubmit} action="">
@@ -113,7 +113,7 @@ const SignUP=()=>{
                         </div>
                         <div className="b-info2">
                             <input type="checkbox" name="" id="" />
-                            <p>I agree to the <span><u>Terms and Conditions</u></span></p>
+                            <p>I agree to the <span><a style={{color:'blue'}} href="">Terms and Conditions</a></span></p>
                         </div>
                     </div>
                     <div className="reg">
