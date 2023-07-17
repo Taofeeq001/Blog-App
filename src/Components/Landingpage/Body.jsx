@@ -7,10 +7,10 @@ const Body=()=>{
     const fetchNews = async () =>{
         const base_url = `https://blog-api-8337.onrender.com/`
         try {
-            await fetch(base_url).then(res=> res.json())
+            await fetch(base_url, {mode:'no-cors'}).then(res=> res.json())
             .then(data=> setNews(data))
         } catch (error) {
-            console.log(error)
+            // console.log(error)
         }
     }
     useEffect(()=>{
