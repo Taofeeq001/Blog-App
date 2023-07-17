@@ -35,6 +35,7 @@ const Nav = ()=>{
                 <a href="">Sport Forum</a>
                 <a href="">Movies</a>
                 <a href="/login">Login</a>
+                <a href="/signup">Sign up</a>
             </div>
         </nav>
     )
