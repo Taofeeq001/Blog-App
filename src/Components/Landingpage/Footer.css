@@ -1,0 +1,35 @@
+.footer{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+}
+.footer-down{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 5rem;
+}
+.footer-list{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:950px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+    .footer-down{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-down h3{
+        font-size: large;
+    }
+}

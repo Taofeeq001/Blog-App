@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import SignUP from './Components/SignUp';
 import Allpost from './Components/Posts/Allpost';
 import Post from './Components/Posts/Post';
 import Login from './Components/Login';
@@ -13,6 +12,7 @@ import Forum from './Components/Forum/Forum';
 import Settings from './Components/Settings/Settings';
 import ForumPost from './Components/Forum/ForumPost';
 import Landingpage from './Components/Landingpage/Landingpage';
+import SignUp from './Components/SignUp';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Landingpage/>}/>
-          <Route path='/signup' element={<SignUP/>}/>
+          <Route path='/signup' element={<SignUp/>}/>
           <Route path='/signin' element={<Login/>}/>
           <Route path='/allposts' element={<Allpost/>}/>
           <Route path='/posts/:title' element={<Post/>}/>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './SignUp.css'
 import { Navigate } from "react-router-dom";
 
-const SignUP=()=>{
+const SignUp=()=>{
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
     const [username, setUsername] = useState("");
@@ -124,4 +124,4 @@ const SignUP=()=>{
         </div>
     )
 }
-export default SignUP;
+export default SignUp;
