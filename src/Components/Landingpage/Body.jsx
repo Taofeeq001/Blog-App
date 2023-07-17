@@ -10,7 +10,7 @@ const Body=()=>{
             await fetch(base_url, {mode:'cors'}).then(res=> res.json())
             .then(data=> setNews(data))
         } catch (error) {
-            // console.log(error)
+            console.log(error)
         }
     }
     useEffect(()=>{
