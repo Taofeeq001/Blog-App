@@ -23,7 +23,7 @@ const Aside=()=>{
         <>
         <button><RxHamburgerMenu onClick={()=> setTog(!tog)} className="tog2"/></button>
         <nav className={click? "nav-sub":'nav'}>
-            <div className="destop-nav">
+            <div className="destop-navdash">
                 <div className="asid-top">
                     <a href="" className={click? "log":"logo"}>Logo</a>
                     <button onClick={buttonClick} className="aside-btn">

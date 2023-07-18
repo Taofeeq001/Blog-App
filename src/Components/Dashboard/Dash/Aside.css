@@ -12,9 +12,9 @@ nav{
     justify-content: space-between;
 }
 
-.destop-nav{
+.destop-navdash{
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
 }
 .asid-top a{
     font-size: xx-large;

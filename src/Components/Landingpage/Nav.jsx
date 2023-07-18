@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import './Nav.css';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FiX } from "react-icons/fi";
+import logo from '../../Images/Sport.png'
 
 const Nav = ()=>{
     const [toggle, setToggle] = useState(false)
     return(
         <nav className="landing-nav">
             <div className="destop-nav">
-                <h3>SportEnTrust</h3>
+                <a href="/"><img src={logo} alt="" /></a>
                 <div className="menu">
                     <a href="">Home</a>
                     <a href="">News</a>
@@ -34,7 +35,7 @@ const Nav = ()=>{
                 <a href="">Politics</a>
                 <a href="">Sport Forum</a>
                 <a href="">Movies</a>
-                <a href="/login">Login</a>
+                <a href="/signin">Login</a>
                 <a href="/signup">Sign up</a>
             </div>
         </nav>
