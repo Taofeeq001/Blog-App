@@ -74,6 +74,12 @@ main{
     padding: 15px 30px;
 
 }
+.borderError{
+    border: 1px solid red;
+}
+.borderSub{
+    border: 1px solid green;
+}
 @media screen and (max-width: 950px) {
     .signup{
         width: 100%;

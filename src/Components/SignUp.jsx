@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './SignUp.css'
 import { Navigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp=()=>{
     const [name, setName] = useState("");
@@ -17,7 +19,8 @@ const SignUp=()=>{
     const handleSubmit=(e)=>{
         e.preventDefault();
         if(!name){
-            alert('First Name required')
+            // alert('First Name required')
+            setError(true)
         }
         else if(!surname){
             alert('surname required')
@@ -30,6 +33,7 @@ const SignUp=()=>{
         }
         else if(name && surname && username && password===confirmPassword){
             setIsClick(true)
+            setError(true)
         }
         const base_url = `https://blog-api-8337.onrender.com/register`
         try {
@@ -40,7 +44,8 @@ const SignUp=()=>{
                     body: JSON.stringify({username, password})
                 })
                 if(res.ok){
-                    alert("Login successful. Proceed to Login")
+                    notify()
+                    // alert("Login successful. Proceed to Login")
                     setRedirect(true)
                     setIsClick(false)
                 }
@@ -52,10 +57,22 @@ const SignUp=()=>{
             setIsClick(true)
         }
     }
+    const notify =()=>{
+        toast.success('Signup successfully. Proceed to log in', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    }
     if(redirect){
         return <Navigate to={'/signin'}/>
     }
-
+    
     return(
         <div className="signup">
             <main>
@@ -71,7 +88,7 @@ const SignUp=()=>{
                     <div className="top-name">
                         <div className="column">
                             <label htmlFor="">First Name</label>
-                            <input type="text" 
+                            <input className={error? "borderError":"borderSub"} type="text" 
                                 value={name} 
                                 onChange={event=> setName(event.target.value)}
                                 name="first name" 

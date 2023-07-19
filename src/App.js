@@ -13,6 +13,8 @@ import Settings from './Components/Settings/Settings';
 import ForumPost from './Components/Forum/ForumPost';
 import Landingpage from './Components/Landingpage/Landingpage';
 import SignUp from './Components/SignUp';
+import { ToastContainer,} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
           <Route path='/forumpost' element={<ForumPost/>}/>
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </div>
   );
 }
