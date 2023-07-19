@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './SignUp.css'
 import { Navigate } from "react-router-dom";
 import { toast } from 'react-toastify';
@@ -29,36 +29,41 @@ const SignUp=()=>{
             alert('Username and Password is highly required')
         }
         else if (password !== confirmPassword){
-            alert("The password inputed does not match, Please recheck!")
+            err('Password does not align!')
+            setError(true)
+            setRedirect(false)
         }
         else if(name && surname && username && password===confirmPassword){
             setIsClick(true)
-            setError(true)
-        }
+        
         const base_url = `https://blog-api-8337.onrender.com/register`
         try {
-            const submitForm =async()=>{
-                const res = await fetch(base_url, {
-                    method: 'POST',
-                    headers:{"content-type": "application/json"},
-                    body: JSON.stringify({username, password})
-                })
-                if(res.ok){
-                    notify()
-                    // alert("Login successful. Proceed to Login")
-                    setRedirect(true)
-                    setIsClick(false)
+        
+                const submitForm =async()=>{
+                    const res = await fetch(base_url, {
+                        method: 'POST',
+                        headers:{"content-type": "application/json"},
+                        body: JSON.stringify({username, password})
+                    })
+                    if (res.ok){
+                        setError(false)
+                        setRedirect(true)
+                        setIsClick(false)
+                        notify("Successfully signed up")
+                    }
                 }
-            }
-            submitForm()
+
+                submitForm()
         } catch (error) {
             setError(true);
             setErrorMessage(error)
             setIsClick(true)
         }
+
     }
-    const notify =()=>{
-        toast.success('Signup successfully. Proceed to log in', {
+    }
+    const notify =(msg)=>{
+        toast.success(msg, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -68,6 +73,18 @@ const SignUp=()=>{
             progress: undefined,
             theme: "light",
         });
+    }
+    const err =(msg)=>{
+        toast.error(msg, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
     }
     if(redirect){
         return <Navigate to={'/signin'}/>
