@@ -84,7 +84,7 @@ const SignUp=()=>{
             draggable: true,
             progress: undefined,
             theme: "light",
-            });
+        });
     }
     if(redirect){
         return <Navigate to={'/signin'}/>

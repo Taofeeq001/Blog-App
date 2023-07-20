@@ -4,6 +4,8 @@ import {AiOutlineUser} from 'react-icons/ai';
 import {GoPasskeyFill} from 'react-icons/go';
 import {BiLogoApple} from 'react-icons/bi'
 import { Navigate} from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login =()=>{
     const [username, setUsername] = useState("");
@@ -16,8 +18,9 @@ const Login =()=>{
     const loginSubmit=(e)=>{
         e.preventDefault();
         if(!username || !password){
-            setError(true)
-            setErrorMessage("Username and Password is required!")
+            setError(false)
+            // setErrorMessage("Username and Password is required!")
+            err("Username and Password is required")
         }else if(username !== '' && password !==''){
             const base_url = `https://blog-api-8337.onrender.com/login/`
             try {
@@ -31,7 +34,8 @@ const Login =()=>{
                     }).then(res => res.json())
                     if (response.ok){
                         setRedirect(true);
-                        alert("Login Successfully. Redirecting to Dashboard...");
+                        // alert("Login Successfully. Redirecting to Dashboard...");
+                        notify("Login successful. Redirecting to Dashboard")
                         setIsClick(false);
                         setError(false)
 
@@ -51,6 +55,30 @@ const Login =()=>{
         }
        
         
+    }
+    const notify =(msg)=>{
+        toast.success(msg, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    }
+    const err =(msg)=>{
+        toast.error(msg, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
     if(redirect){
         return <Navigate to={'/dashboard'}/>
