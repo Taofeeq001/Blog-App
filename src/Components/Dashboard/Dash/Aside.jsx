@@ -7,6 +7,7 @@ import {MdSportsScore, MdOutlineForum} from 'react-icons/md';
 import {BiLogOutCircle} from 'react-icons/bi';
 import {IoMdSettings} from 'react-icons/io';
 import {FiX} from 'react-icons/fi';
+import logo from '../../../Images/Sport.png'
 
 
 const Aside=()=>{
@@ -25,7 +26,9 @@ const Aside=()=>{
         <nav className={click? "nav-sub":'nav'}>
             <div className="destop-navdash">
                 <div className="asid-top">
-                    <a href="" className={click? "log":"logo"}>Logo</a>
+                    <a href="" className={click? "log":"logo"}>
+                        <img src={logo} alt="" />
+                    </a>
                     <button onClick={buttonClick} className="aside-btn">
                         {click? <FiX className="toggle"/>:<RxHamburgerMenu className="toggle"/>}
                     </button>

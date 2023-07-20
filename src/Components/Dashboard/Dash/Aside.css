@@ -11,6 +11,11 @@ nav{
     display: flex;
     justify-content: space-between;
 }
+.logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
 
 .destop-navdash{
     display: flex;
