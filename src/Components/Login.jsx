@@ -3,7 +3,7 @@ import './Login.css'
 import {AiOutlineUser} from 'react-icons/ai';
 import {GoPasskeyFill} from 'react-icons/go';
 import {BiLogoApple} from 'react-icons/bi'
-import { Navigate, json } from "react-router-dom";
+import { Navigate} from "react-router-dom";
 
 const Login =()=>{
     const [username, setUsername] = useState("");
@@ -47,15 +47,11 @@ const Login =()=>{
                 
             } catch (error) {
                 setError(true)
-                // setErrorMessage(error)
-                // setIsClick(true)
             }
         }
        
         
     }
-
-
     if(redirect){
         return <Navigate to={'/dashboard'}/>
     }

@@ -16,5 +16,50 @@
     border-radius: 10px;
     padding: 25px;
     background-color: white;
+}
+.editpost{
+    display: flex;
+    gap: 50px;
+}
+.editpost button{
+    border-radius: 15px;
+    border: none;
+    padding: 10px 17px;
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+}
 
+@media screen and (max-width:950px) {
+    .singlepost{
+        width: 100%;
+    }
+    .post-content{
+        width: 95%;
+        padding: 10px;
+    }
+    .singlepost-top{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .singlepost-top h1{
+        font-size: large;
+    }
+    .post-content img{
+        width: 300px;
+        height: 200px;
+    }
+    .editpost{
+        display: flex;
+        gap: 50px;
+    }
+    .editpost button{
+        border-radius: 15px;
+        border: none;
+        padding: 10px 17px;
+        background-color: grey;
+        color: white;
+        font-weight: bold;
+    }
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import './SportUpdate.css'
 import susan from '../../../Images/susanpix.jpg'
+import {AiOutlineLike} from 'react-icons/ai'
+import {GrDislike} from 'react-icons/gr'
+
 
 const SportUpdate=()=>{
     return(
@@ -18,8 +21,8 @@ const SportUpdate=()=>{
                 </div>
                 <p> Assumenda, quis. Voluptate eaque libero explicabo nobis odit consequuntur quos. Libero similique illo incidunt. Fugit error consectetur, illum natus molestiae nobis eligendi.</p>
                 <div className="like">
-                    <p>like</p>
-                    <p>dislike</p>
+                    <button><AiOutlineLike/></button>
+                    <button>dislike</button>
 
                 </div>
             </div>

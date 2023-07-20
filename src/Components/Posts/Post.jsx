@@ -26,12 +26,14 @@ const Post= () => {
         <div className="singlepost">
             {
                 <div className="post-content">
-                    <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+                    <div className="singlepost-top" style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
                         <h1>{post.title}</h1>
-                        <em style={{border:'1px solid black', padding:'10px', backgroundColor:'green', borderRadius:'10px', color:'white', fontWeight:700}}>Views: {post.views}</em>
+                        <div className="editpost">
+                            <button>Edit Post</button>
+                            <em style={{border:'1px solid black', padding:'10px', backgroundColor:'green', borderRadius:'10px', color:'white', fontWeight:700}}>Views: {post.views}</em>
+                        </div>
                     </div>
                     {/* <em>Created at:{formatISO9075(new Date(post.createdAt))}</em> */}
-                    <p>{post.title}</p>
                     <img src={`https://blog-api-8337.onrender.com/${post.cover_img}`} alt="" />
                     <div dangerouslySetInnerHTML={{__html: post.content}}></div>
                     <b>Post Summary: {post.summary}</b>
