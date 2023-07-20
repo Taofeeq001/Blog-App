@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import './SportUpdate.css'
 import susan from '../../../Images/susanpix.jpg'
-import {AiOutlineLike} from 'react-icons/ai'
-import {GrDislike} from 'react-icons/gr'
+import {AiOutlineLike, AiOutlineDislike} from 'react-icons/ai'
 
 
 const SportUpdate=()=>{
+    const [like, setLike] = useState(0)
+    const [dislike, setDislike] = useState(0)
     return(
         <div className="update-container">
             <div className="update-title">
@@ -20,10 +21,9 @@ const SportUpdate=()=>{
                     </div>
                 </div>
                 <p> Assumenda, quis. Voluptate eaque libero explicabo nobis odit consequuntur quos. Libero similique illo incidunt. Fugit error consectetur, illum natus molestiae nobis eligendi.</p>
-                <div className="like">
-                    <button><AiOutlineLike/></button>
-                    <button>dislike</button>
-
+                <div className="reaction">
+                    <button onClick={()=> setLike(like +1)} className="like"><AiOutlineLike/> {like}</button>
+                    <button onClick={()=> setDislike(dislike +1)} className="dislike"><AiOutlineDislike/> {dislike}</button>
                 </div>
             </div>
             <div className="sportupdate">
@@ -35,10 +35,9 @@ const SportUpdate=()=>{
                     </div>
                 </div>
                 <p> Assumenda, quis. Voluptate eaque libero explicabo nobis odit consequuntur quos. Libero similique illo incidunt. Fugit error consectetur, illum natus molestiae nobis eligendi.</p>
-                <div className="like">
-                    <p>like</p>
-                    <p>dislike</p>
-
+                <div className="reaction">
+                    <button onClick={()=> setLike(like +1)} className="like"><AiOutlineLike/> {like}</button>
+                    <button onClick={()=> setDislike(dislike +1)} className="dislike"><AiOutlineDislike/> {dislike}</button>
                 </div>
             </div>
             <div className="sportupdate">
@@ -50,10 +49,9 @@ const SportUpdate=()=>{
                     </div>
                 </div>
                 <p> Assumenda, quis. Voluptate eaque libero explicabo nobis odit consequuntur quos. Libero similique illo incidunt. Fugit error consectetur, illum natus molestiae nobis eligendi.</p>
-                <div className="like">
-                    <p>like</p>
-                    <p>dislike</p>
-
+                <div className="reaction">
+                    <button className="like"><AiOutlineLike/> 0</button>
+                    <button className="dislike"><AiOutlineDislike/> 0</button>
                 </div>
             </div>
             <div className="sportupdate">
@@ -65,10 +63,9 @@ const SportUpdate=()=>{
                     </div>
                 </div>
                 <p> Assumenda, quis. Voluptate eaque libero explicabo nobis odit consequuntur quos. Libero similique illo incidunt. Fugit error consectetur, illum natus molestiae nobis eligendi.</p>
-                <div className="like">
-                    <p>like</p>
-                    <p>dislike</p>
-
+                <div className="reaction">
+                    <button className="like"><AiOutlineLike/> 0</button>
+                    <button className="dislike"><AiOutlineDislike/> 0</button>
                 </div>
             </div>
             <div className="sportupdate">
@@ -80,10 +77,9 @@ const SportUpdate=()=>{
                     </div>
                 </div>
                 <p> Assumenda, quis. Voluptate eaque libero explicabo nobis odit consequuntur quos. Libero similique illo incidunt. Fugit error consectetur, illum natus molestiae nobis eligendi.</p>
-                <div className="like">
-                    <p>like</p>
-                    <p>dislike</p>
-
+                <div className="reaction">
+                    <button className="like"><AiOutlineLike/> 0</button>
+                    <button className="dislike"><AiOutlineDislike/> 0</button>
                 </div>
             </div>
             <div className="sportupdate">
@@ -95,10 +91,9 @@ const SportUpdate=()=>{
                     </div>
                 </div>
                 <p> Assumenda, quis. Voluptate eaque libero explicabo nobis odit consequuntur quos. Libero similique illo incidunt. Fugit error consectetur, illum natus molestiae nobis eligendi.</p>
-                <div className="like">
-                    <p>like</p>
-                    <p>dislike</p>
-
+                <div className="reaction">
+                    <button className="like"><AiOutlineLike/> 0</button>
+                    <button className="dislike"><AiOutlineDislike/> 0</button>
                 </div>
             </div>
             <div className="sportupdate">
@@ -110,10 +105,9 @@ const SportUpdate=()=>{
                     </div>
                 </div>
                 <p> Assumenda, quis. Voluptate eaque libero explicabo nobis odit consequuntur quos. Libero similique illo incidunt. Fugit error consectetur, illum natus molestiae nobis eligendi.</p>
-                <div className="like">
-                    <p>like</p>
-                    <p>dislike</p>
-
+                <div className="reaction">
+                    <button className="like"><AiOutlineLike/> 0</button>
+                    <button className="dislike"><AiOutlineDislike/> 0</button>
                 </div>
             </div>
         </div>

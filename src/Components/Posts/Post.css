@@ -29,6 +29,20 @@
     color: white;
     font-weight: bold;
 }
+.reaction{
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    margin-top: 10px;
+}
+.reaction button{
+    border: none;
+    background-color: transparent;
+}
+.like, .dislike{
+    display: flex;
+    align-items: center;
+}
 
 @media screen and (max-width:950px) {
     .singlepost{
