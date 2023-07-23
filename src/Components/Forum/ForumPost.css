@@ -1,0 +1,54 @@
+.fpost{
+    /* background-color: brown; */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width:100%; 
+    height:100vh ;
+} 
+.fpost-body{
+    width:70%;
+    background-color:white;
+    display:flex; 
+    flex-direction:column;
+    gap: 20px;
+}
+.fpost-body input{
+    width: 100%;
+    padding: 6px;
+}
+.attest{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+.attest input{
+    width: 10%;
+}
+.attest p{
+    width: 100%;
+}
+.forum-btn button{
+    padding: 10px 17px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 950px) {
+    .fpost{
+        width: 100%;
+    }
+    .fpost-body{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .fpost-body h1{
+        font-size: 22px;
+    }
+
+}

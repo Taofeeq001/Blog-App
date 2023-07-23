@@ -1,11 +1,12 @@
 import React from "react";
+import './ForumPost.css'
 import ReactQuill from "react-quill";
 
 
 const ForumPost=()=>{
     return(
-        <div style={{backgroundColor:'brown', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', width:'100%', height:'100vh'}}>
-            <div style={{width:'50%', backgroundColor:'white', display:'flex', flexDirection:'column', border:'1px solid black', height:'60vh'}}>
+        <div className="fpost">
+            <div className="fpost-body">
                 <h1>Upload a post to the forum here</h1>
                 <div>
                     <h2>Title</h2>
@@ -15,8 +16,14 @@ const ForumPost=()=>{
                     <h2>Summary</h2>
                     <input type="text" />
                 </div>
-                <ReactQuill style={{height:'10vh'}}/>
                 <div>
+                    <ReactQuill/>
+                </div>
+                <div className="attest">
+                    <input type="checkbox" name="" id="" />
+                    <p>Note: User are liable and accountable for any content post here</p>
+                </div>
+                <div className="forum-btn">
                     <button>Submit</button>
                 </div>
             </div>

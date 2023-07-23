@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Forum.css';
 import Aside from "../Dashboard/Dash/Aside";
-import { FiPlus, FiSearch } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 import { Data } from "./Data";
 
 
@@ -19,7 +19,7 @@ const Forum=()=>{
                 <div className='forum-container'>
                     <div className="forum-top">
                         <div className="btns">
-                            <button className="newpost"> <FiPlus style={{width:'20px', height:'20px'}}/> New Post</button>
+                            <button className="newpost"> New Post</button>
                             <button className="toppost">Top Posts</button>
                             <button className="newpost">Most Read</button>
                             <button className="toppost"><a href="/forumpost">Upload a post here</a></button>
@@ -44,33 +44,35 @@ const Forum=()=>{
                         </select>
                     </div>
                     
-                    <table className="forumdetails">
-                        <tr className="row">
-                            <th className="subject-author">Subject/Author</th>
-                            <th className="lastpost">Updated at</th>
-                            <th className="Read">Read</th>
-                        </tr>
-                        {
-                            filteredSearch.map((dat, index)=>(
-                            <tr className="row" key={index}>
-                                <td className="author">
-                                    <div>
-                                        <b>{dat.topic}</b>
-                                    </div>
-                                    <div>
-                                        {dat.summary}
-                                    </div>
-                                    <div>
-                                        <p>By: {dat.author}</p>
-                                    </div>
-                                </td>
-                                <td>{dat.posted_at}</td>
-                                <td>{dat.Read}</td>
+                    <div className="over">
+                        <table className="forumdetails">
+                            <tr className="row">
+                                <th className="subject-author">Subject/Author</th>
+                                <th className="lastpost">Updated at</th>
+                                <th className="Read">Read</th>
                             </tr>
-                            ))
-                        }
-                        
-                    </table>
+                            {
+                                filteredSearch.map((dat, index)=>(
+                                <tr className="row" key={index}>
+                                    <td className="author">
+                                        <div>
+                                            <b>{dat.topic}</b>
+                                        </div>
+                                        <div>
+                                            {dat.summary}
+                                        </div>
+                                        <div>
+                                            <p>By: {dat.author}</p>
+                                        </div>
+                                    </td>
+                                    <td className="posted">{dat.posted_at}</td>
+                                    <td className="posted">{dat.Read}</td>
+                                </tr>
+                                ))
+                            }
+                            
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

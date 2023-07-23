@@ -52,7 +52,6 @@
 }
 .subject-author{
     width: 80%;
-    /* display: flex; */
 }
 .lastpost{
     width: 10%;
@@ -120,12 +119,61 @@
     flex-direction: column;
     gap: 5px;
     margin-bottom: 20px;
-    width: 70%;
+    width: 90%;
 }
 .posted{
     width: 10%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 .row{
     width: 100%;
+}
+@media screen and (max-width: 950px) {
+    .forum-container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .forum-top .btns{
+        display: flex;
+        width: 100%;
+        gap: 10px;
+    }
+    .btns button{
+        font-size: 15px;
+        padding: 5px 10px;
+        font-weight: 200;
+        border-radius: 4px;
+    }
+    .forum-top{
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .forum-search{
+        width: 100%;
+    }
+    .forum-search input{
+        padding: 5px;
+    }
+    .forumdetails{
+        width: 150%;
+        overflow: scroll;
+        font-size: 15px;
+    }
+    .row th{
+        font-size: 16px;
+    }
+    .author{
+        width: 100%;
+    }
+    .posted{
+        width: 50%;
+        text-align: center;
+    }
+    .over{
+        overflow: scroll;
+    }
+    .over::-webkit-scrollbar{
+        display: none;
+    }
 }
